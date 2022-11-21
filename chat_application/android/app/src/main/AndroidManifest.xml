@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chat_application">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="chat_application"
+        android:label="chat_application" 
        android:usesCleartextTraffic="true"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

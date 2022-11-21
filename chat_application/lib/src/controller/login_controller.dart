@@ -42,7 +42,7 @@ class LoginController extends GetxController {
       numberError.value = "Invalid Number";
     } else {
       numberError("");
-      number = code + numberController.text;
+      number = numberController.text;
       await appFirebase.sendVerificationCode(number);
     }
   }

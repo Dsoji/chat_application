@@ -13,6 +13,7 @@ class AppFirebase {
   Future<void> sendVerificationCode(String number) async {
     await FirebaseAuth.instance.verifyPhoneNumber(
         phoneNumber: number,
+        timeout: const Duration(seconds: 60),
         verificationCompleted: (PhoneAuthCredential credential) {
           printInfo(info: "user verified");
         },
@@ -24,7 +25,6 @@ class AppFirebase {
           await pref.setString("code", verificationId);
           Get.to(const VerificationScreen());
         },
-        timeout: const Duration(seconds: 60),
         codeAutoRetrievalTimeout: (String verificationId) {});
   }
 

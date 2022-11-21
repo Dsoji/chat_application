@@ -228,6 +228,7 @@ class UserInfoScreen extends GetView<LoginController> {
                                     left: 24, right: 24, bottom: 30, top: 40),
                                 child: Container(
                                   height: 48,
+                                  width: 100,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30),
                                     boxShadow: [
